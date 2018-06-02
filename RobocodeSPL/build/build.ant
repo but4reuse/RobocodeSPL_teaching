@@ -1,0 +1,26 @@
+<project name="RobocodeSPL" default="copyJarToTester">    
+	
+  <property name="projectHome" location="../." />
+  <property name="testerHome" location="../../ModuleTester" />
+  <property name="ROBOCODE_HOME" value="${projectHome}\robocode\libs"/>
+  <property name="CLASSPATH" value="./classes;${ROBOCODE_HOME}/robocode.jar"/>
+	
+  <target name="createjar">
+  	<delete file="${projectHome}/build/jab.ModuleBot_1.jar"/>
+  	<javac srcdir="${projectHome}/src" destdir="${projectHome}/bin" classpath="${CLASSPATH}" debug="${COMPILE_WITH_DEBUG}" includes="**/*.java"/>
+    <jar destfile="${projectHome}/build/jab.ModuleBot_1.jar" basedir="${projectHome}/bin" />
+  	<jar destfile="${projectHome}/build/jab.ModuleTeam_1.jar" basedir="${projectHome}/bin" />
+  	<available file="${testerHome}" property="tester.present"/>
+  </target>
+	
+  <target name="copyJarToTester" depends="createjar" if="tester.present">
+  	<delete file="${testerHome}/bots/jab.ModuleBot_1.jar"/>
+  	<delete file="${testerHome}/bots/jab.ModuleTeam_1.jar"/>
+  	<delete file="${testerHome}/robocodes/r1/robots/jab.ModuleBot_1.jar"/>
+  	<delete file="${testerHome}/robocodes/r1/robots/jab.ModuleTeam_1.jar"/>
+  	<copy file="${projectHome}/build/jab.ModuleBot_1.jar" todir="${testerHome}/bots"/>
+  	<copy file="${projectHome}/build/jab.ModuleBot_1.jar" todir="${testerHome}/robocodes/r1/robots"/>
+  	<copy file="${projectHome}/build/jab.ModuleTeam_1.jar" todir="${testerHome}/bots"/>
+  	<copy file="${projectHome}/build/jab.ModuleTeam_1.jar" todir="${testerHome}/robocodes/r1/robots"/>
+  </target>
+</project>

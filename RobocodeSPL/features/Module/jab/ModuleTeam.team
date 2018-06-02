@@ -1,0 +1,7 @@
+#Robocode robot team
+team.members=jab.ModuleBot 1,jab.ModuleBot 1,jab.ModuleBot 1,jab.ModuleBot 1,jab.ModuleBot 1
+team.author.name=jab
+team.version=1
+robocode.version=1.6.0.1
+uuid=d0169ab2-f92f-4540-8103-cab20b8df8c3
+team.description=Five Module Bots

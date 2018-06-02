@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and mandatory="true" name="Module">
+            <alt abstract="true" mandatory="true" name="Radar">
+                <feature name="SpinningRadar"/>
+                <feature name="MouseRadar"/>
+            </alt>
+            <alt abstract="true" mandatory="true" name="Targeting">
+                <feature name="HeadOnTargeting"/>
+                <feature name="LinearTargeting"/>
+                <feature name="MouseTargeting"/>
+            </alt>
+            <alt abstract="true" mandatory="true" name="Movement">
+                <feature name="NoMovement"/>
+                <feature name="KeyboardMovement"/>
+            </alt>
+            <alt abstract="true" mandatory="true" name="SelectEnemy">
+                <feature name="WeakestSelectEnemy"/>
+                <feature name="StrongestSelectEnemy"/>
+                <feature name="ClosestSelectEnemy"/>
+            </alt>
+            <alt abstract="true" mandatory="true" name="Gun">
+                <feature name="MaximumPowerGun"/>
+                <feature name="NoFireGun"/>
+                <feature name="MouseClickGun"/>
+            </alt>
+        </and>
+    </struct>
+    <constraints/>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>
