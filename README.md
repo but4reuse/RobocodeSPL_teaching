@@ -17,7 +17,5 @@ In this hands-on experience we will create a factory of bots using the Software 
 ## How can we start?
 Check the wiki https://github.com/but4reuse/RobocodeSPL_teaching/wiki
 
-You may also want to read "Software Product Line Extraction from Variability-Rich Systems: The Robocode Case Study" for more details on the case study and a first experience report of its usage with students.
-
-## How to cite?
+## How to cite RobocodeSPL and where to read about an experience report?
 Jabier Martinez, Xhevahire Tërnava, Tewfik Ziadi. Software Product Line Extraction from Variability-Rich Systems: The Robocode Case Study, 22nd International Systems and Software Product Line Conference (SPLC), Sept 10-14, Gothenburg, Sweden, 2018
